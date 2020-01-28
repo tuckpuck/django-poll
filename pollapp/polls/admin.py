@@ -1,7 +1,10 @@
 from django.contrib import admin
 from .models import Question, Choice
 
-# Register your models here.
+admin.site.site_header = "Poll App Admin"
+admin.site.site_title = "Poll App Admin Area"
+admin.site.index_title = "Welcome to the Pollster Admin area"
+
 class ChoiceInline(admin.TabularInline):
     model = Choice
     extra = 3
